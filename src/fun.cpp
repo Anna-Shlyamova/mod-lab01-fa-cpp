@@ -17,8 +17,9 @@ unsigned int faStr1(const char* str) {
                 count++;
             }
             inWord = false;
-        } else if (isdigit(*str) && inWord)
+        } else if (isdigit(*str) && inWord) {
             isNumberIn = true;
+        }
         str++;
     }
     return count;
@@ -41,10 +42,11 @@ unsigned int faStr2(const char* str) {
 
             inWord = true;
             isLowerLetters = true;
-        } else if (isspace(*str) && inWord)
+        } else if (isspace(*str) && inWord) {
             inWord = false;
-        else if (!islower(*str) && inWord)
+        } else if (!islower(*str) && inWord) {
             isLowerLetters = false;
+        }
         str++;
     }
     return count;
@@ -61,10 +63,11 @@ unsigned int faStr3(const char* str) {
             inWord = true;
             wordLength++;
             wordsCount++;
-        } else if (isspace(*str) && inWord)
+        } else if (isspace(*str) && inWord) {
             inWord = false;
-        else if (!isspace(*str) && inWord)
+        } else if (!isspace(*str) && inWord) {
             wordLength++;
+        }
         str++;
     }
 
